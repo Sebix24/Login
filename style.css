@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f6fc;
+    transition: all 1s ease;
+}
+
+/*Estilos para el boton de modo oscuro*/
+.boton-modo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    list-style-type: none;
+}
+
+.switch{
+    width: 80px;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 100px;
+    border: #333 solid 2px;
+    background-color: #34495E;
+}
+
+.switch i{
+    font-size: 1.5em;
+    color: #F1C40F;
+}
+
+.boton-modo li:last-child::before{
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    border: solid thin black;
+    left: 0;
+    right: unset;
+    cursor: pointer;
+}
+
+.boton-modo li:last-child.active::before{
+    right: 0;
+    left: unset;
+    border: solid thin aliceblue;
+    cursor: pointer;
+}
+
+.boton-modo li:last-child.active i:first-child{
+    color: #F1C40F;
+}
+
+.boton-modo li:last-child.active{
+    background-color: #34495E;
+    border: solid 2px aliceblue;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*Modo oscuro para los campos*/
+body.active{
+    background-color: #3d3d3d;
+}
+
+body.active .information{
+    background-color: #000000;
+}
+
+body.active .childs h2{
+    color: aliceblue;
+    transition: all 1s ease;
+}
+
+body.active .childs p{
+    color: aliceblue;
+    transition: all 1s ease;
+}
+
+body.active .form-information{
+    background-color: #888888;
+    transition: all 1s ease;
+}
+
+body.active .form-information-childs h2{
+    color: #000000;
+    transition: all 1s ease;
+}
+
+body.active .form-information-childs .icons i{
+    color: aliceblue;
+    border: none;
+}
+
+body.active .form-information-childs .icons i:hover{
+    background-color: #000000;
+    border: solid 2px aliceblue;
+    transition: all 1s ease;
+}
+
+body.active .form-information-childs p{
+    color: aliceblue;
+}
+
+body.active .form input[type="submit"]{
+    color: aliceblue;
+    border: none;
+}
+
+body.active .form input[type="submit"]:hover{
+    background-color: #000000;
+    transition: all 1s ease;
+    border: none;
+}
+
+body.active .childs input{
+    color: aliceblue;
+    border: solid 2px #000000;
+}
+
+body.active .childs input:hover{
+    color: black;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Estilos definidos de los formularios*/
+.container-form{
+    border-radius: 20px;
+    height: 500px;
+    max-width: 1000px;
+    transition: all 1s ease;
+    margin: 10px;
+    display: flex;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.information{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e375c;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: all 1s ease;
+}
+
+.childs{
+    width: 100%;
+    padding: 0 30px;
+}
+
+.childs h2{
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.childs p{
+    margin-top: 30px;
+    color: aliceblue;
+}
+
+.childs input{
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: aliceblue;
+    padding: 15px;
+    cursor: pointer;
+    border: solid thin #1e375c;
+    outline: none;
+    transition: background-color 1s ease;
+}
+
+.childs input:hover{
+    background-color: aliceblue;
+    color: black;
+    border: none;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.form-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #c6d8f1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 60%;
+}
+
+.form-information-childs{
+    padding: 0 30px;
+}
+
+.form-information-childs h2{
+    font-size: 2rem;
+    color: #14243d;
+}
+
+.form-information-childs p{
+    margin-top: 10px;
+    color: #14243d;
+}
+
+.icons{
+    margin: 15px 0;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #14243d;
+}
+
+.icons i{
+    border-radius: 50px;
+    border: solid thin #c6d8f1;
+    padding: 13px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.icons i:hover{
+    background-color: #14243d;
+    color: aliceblue;
+    border: none;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.form{
+    margin: 20px 0 0 0;
+}
+
+.form label{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: aliceblue;
+    padding: 0 15px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.form label input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: aliceblue;
+    color: black;
+}
+
+.form i{
+    color: #14243d;
+}
+
+.form input[type="submit"]{
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border: solid thin #c6d8f1;
+    color: #14243d;
+    transition: background-color 1s ease;
+}
+
+.form input[type="submit"]:hover{
+    background-color: #14243d;
+    color: aliceblue;
+    border: none;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.hide{
+    position: absolute;
+    transform: translateY(-300%);
+}
